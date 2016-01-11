@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesome Label</title>
+    <link rel="stylesheet" href="css/app.css" title="Main CSS" charset="utf-8">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <h2>SIGN UP NOW</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" name="fname" value="">
+          <label for="fname">Full Name</label>
+        </div>
+        <div class="input-box">
+          <input type="email" name="email" value="">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" name="pass" value="">
+          <label for="pass">Password</label>
+        </div>
+        <div class="input-box">
+          <input type="password" name="cpass" value="">
+          <label for="cpass">Confirm Password</label>
+        </div>
+
+        <input type="submit" value="SIGN UP">
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.wrapper input').focusout(function(){
+          var text_value = $(this).val();
+
+          if (text_value === "") {
+            $(this).removeClass('float-label');
+          }else {
+            $(this).addClass('float-label');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

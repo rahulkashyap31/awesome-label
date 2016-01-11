@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+}
+.wrapper {
+  width: 460px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px RGBA(0, 0, 0, 0.24);
+  border-radius: 5px;
+  padding: 20px 25px;
+  text-align: center;
+  margin-top: 60px;
+}
+.wrapper h2 {
+    border-bottom: 2px solid #19acb7;
+    color: #19acb7;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+input{
+  background: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #0db5c2;
+  width: 100%;
+}
+input[type=text],
+input[type=email],
+input[type=password]{
+  padding: 15px 0;
+  border: none;
+  border-bottom: 2px solid #51f3ff;
+}
+input[type=submit]{
+  background-color: #0db5c2;
+  color: #fff;
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+  margin-top: 20px;
+  -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+input[type=submit]:hover{
+  background-color: #fff;
+  color: #0db5c2;
+  text-shadow: 0 0 5px RGBA(0, 0, 0, 0.27);
+  box-shadow: 0 0 5px RGBA(0, 0, 0, 0.27);
+}
+label {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  color: #999;
+  font-style: italic;
+  font-size: 15px;
+  pointer-events: none;
+  -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+input[type=text]:focus + label,
+input[type=email]:focus + label,
+input[type=password]:focus + label,
+.float-label + label{
+  top: -8px;
+  color: #0db5c2;
+  font-size: 13px;
+}
